@@ -52,10 +52,34 @@ body {
   font-weight: 400;
   line-height: 1.6; }
 
+.gallery {
+  display: flex; }
+  .gallery__photo {
+    width: 100%;
+    display: block; }
+
+.overview {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-grey-light-2); }
+  .overview__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem; }
+  .overview__stars {
+    margin-right: auto;
+    display: flex; }
+  .overview__icon-star, .overview__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary); }
+
 .header {
   height: 7rem;
   background-color: #fff;
-  border-bottom: var(--color-grey-light-2);
+  border-bottom: 1px solid var(--color-grey-light-2);
   font-size: 1.4rem;
   display: flex;
   justify-content: space-between;
@@ -204,5 +228,4 @@ body {
 .hotel-view {
   background-color: #fff;
   flex: 1;
-  height: 80rem;
-  background-color: plum; }
+  height: 80rem; }
