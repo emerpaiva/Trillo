@@ -4,3 +4,9 @@ body {
   font-weight: 400;
   line-height: 1.6;
 }
+
+.paragraph {
+  &:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+}
