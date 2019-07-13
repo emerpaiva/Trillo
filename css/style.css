@@ -78,8 +78,13 @@ body {
   display: inline-block;
   transition: all .2s;
   border-bottom: 1px solid currentColor; }
+  .btn-inline span {
+    margin-left: 3px;
+    transition: margin-left .2s; }
   .btn-inline:hover {
     color: var(--color-grey-dark-1); }
+    .btn-inline:hover span {
+      margin-left: 8px; }
   .btn-inline:focus {
     outline: none;
     animation: pulsate 1s infinite; }
@@ -169,6 +174,49 @@ body {
     box-sizing: content-box; }
     .recommend__photo:not(:last-child) {
       margin-right: -1.15rem; }
+
+.review {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden; }
+  .review__text {
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 10; }
+  .review__user {
+    display: flex;
+    align-items: center; }
+    .review__user-name {
+      font-weight: bold;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      margin-bottom: .4rem; }
+    .review__user-date {
+      color: var(--color-grey-dark-3);
+      font-size: 1rem; }
+  .review__photo {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    margin-right: 1rem; }
+  .review__rating {
+    color: var(--color-primary);
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-left: auto; }
+  .review::before {
+    content: "\201C";
+    position: absolute;
+    top: -3rem;
+    left: -1rem;
+    font-size: 20rem;
+    line-height: 1;
+    color: var(--color-grey-light-2);
+    font-family: sans-serif;
+    z-index: 1; }
 
 .header {
   height: 7rem;
@@ -327,10 +375,10 @@ body {
   background-color: var(--color-gray-light-1);
   border-bottom: var(--line);
   display: flex;
-  padding: 4.5rem; }
+  padding: 4.5rem;
+  font-size: 1.4rem; }
 
 .description {
-  font-size: 1.4rem;
   background-color: #fff;
   box-shadow: var(--shadow-light);
   padding: 3rem;
@@ -338,5 +386,7 @@ body {
   margin-right: 4.5rem; }
 
 .user-reviews {
-  background-color: yellowgreen;
-  flex: 1; }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }

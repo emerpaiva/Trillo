@@ -8,11 +8,20 @@
   display: inline-block;
   transition: all .2s;
 
+  & span {
+    margin-left: 3px;
+    transition: margin-left .2s;
+  }
+
   // exact same color of text
   border-bottom: 1px solid currentColor;
 
   &:hover {
     color: var(--color-grey-dark-1);
+
+    & span {
+      margin-left: 8px;
+    }
   }
 
   &:focus {
